@@ -45,6 +45,7 @@ class Plugin {
   
   public function menu_shortcode( $atts ) {
     $atts = $this->shortcode_atts( self::$defaults, $atts );
+    $atts[ 'echo' ] = false;
     return wp_nav_menu( $atts );
   }
   
